@@ -20,7 +20,7 @@ Lbmr=load([anaL filesep 'RCM_BMC_BMA.mat']);
 LGCM=spm_dcm_load(Lbmr.RCM(:,maxind));
 
 agecov = 1; %whether to include age as a PEB covariate in Baseline PEB
-dayscov = 0; %whether to include days as a PEB covariate in longitudinal PEB
+dayscov = 1; %whether to include days as a PEB covariate in longitudinal PEB
 
 
 %% Define AMPA v GABA v NMDA fields
