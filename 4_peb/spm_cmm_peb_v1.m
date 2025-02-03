@@ -39,9 +39,9 @@ X(:,1)=ones; %  mean
 con = find(contains(Bsubs, 'C'));
 pat = find(contains(Bsubs, 'P'));
 
-X(1:con(end),2)=0;
+X(con,2)=0;
 X_labels={'mean','cons>pats'};
-X(pat:end,2)=1;
+X(pat,2)=1;
 
 if agecov==1
     
