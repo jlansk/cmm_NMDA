@@ -3,8 +3,6 @@
 %(controls vs AD/MCI) and longitudinal (AD/MCI baseline vs follow up)
 %comparisons and generates mismatch negativity waveform plots.
 
-% For deviant vs repetition 5
-
 % set up variables
 clearvars
 E = cmm_environment;
@@ -18,7 +16,7 @@ load([scr filesep 'AFsubs.mat']); % 1x33 cell with follow-up IDs
 task='mmn';
 session1 = 'BL';
 session2 = 'AF';
-lfile= 'bCPffmraeMaffffdtsss.mat'; % file with preprocessing and combined grads
+lfile= 'bCPffmraeMaffffdtsss.mat'; % file with NTAD preprocessing pipeline and additional sensor-space processing (combined gradiometers, then baseline correction)
 
 %% load baseline MMN amplitude
 [mmn_pa_BL, mmnBL] = mmn_amp(BLsubs, ana_dir, 'BL', task, lfile, 0);
