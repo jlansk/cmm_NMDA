@@ -1,4 +1,4 @@
-%% Combine gradiometers for sensor analysis
+%% Combine gradiometers (for sensor analysis only)
 % This script combines planar gradiometers for the sensor-level analyses
 
 subjects=BLsubs;
