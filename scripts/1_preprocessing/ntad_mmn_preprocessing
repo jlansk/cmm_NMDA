@@ -4,11 +4,9 @@
 
 %This routine uses a standard preprocessing pipeline developed for the NTAD
 %study. Preprocessing is completed for all participants and all sessions
-%(baseline, two week, follow up)
+%(baseline, follow up)
 
-% JL - note, if parfor does not work, add 'BL' or 'AF' or 'TW' instead of variable name (session/ses_nam) in ICA
-clearvars
-E = cmc_environment;
+E = cmm_environment;
 
 % Directories
 ana_dir = E.raw;
@@ -16,8 +14,8 @@ task='mmn/';
 session = 'BL';
 scr = E.scr; %file location of scripts
 
-load([scr filesep 'TWsubs']);%load([scr filesep 'BLsubs']); %load([scr filesep 'AFsubs']);
-subjects = TWsubs; %BLsubs % AFsubs
+load([scr filesep 'BLsubs']); %load([scr filesep 'AFsubs']);
+subjects = BLsubs; %BLsubs % AFsubs
 
 % Processing switches
 doconvert = 1; % Convert to SPM
@@ -26,11 +24,11 @@ dofilter = 1; % Filter
 donotch = 1; % Notch filter
 doartefact = 1; % Artefact rejection,
 doica = 1; % Run ICA
-doepoch = 0; % Epoch
-doartefact2 = 0; % Second artefact rejection
-doaverage = 0; % Average trials and low pass
+doepoch = 1; % Epoch
+doartefact2 = 1; % Second artefact rejection
+doaverage = 1; % Average trials and low pass
 docontrast = 0; % Compute contrasts
-dofilter2 = 0; % Filter to analysis-specific frequency band
+dofilter2 = 1; % Filter to analysis-specific frequency band
 dorename = 0; % Rename files to something sensible
 
 % Parameters
