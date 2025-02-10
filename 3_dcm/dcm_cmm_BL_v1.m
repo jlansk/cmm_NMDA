@@ -8,8 +8,6 @@
 clearvars
 E = cmm_environment;
 
-addpath(genpath('/imaging/rowe/users/jl01/meg/dcm_cmc/scripts/to_publish/'))
-
 %% Set up variables
 scr = E.scr;
 
@@ -17,7 +15,7 @@ load([scr '/BLsubs.mat']);
 subjects = BLsubs;
 anaB = E.anaB; %character array to DCM files location
 raw = E.raw;  % character aray to base file directory (e.g. raw='/juliette/cmm/meg_data')
-rawlast = '/BL/mmn/ffmraeMaffffdtsss.mat'; % file that has had all NTAD preprocessing steps applied
+rawlast = '/BL/mmn/ffmraeMaffffdtsss.mat'; % file that has NTAD preprocessing steps applied
 
 
 %% Set up  model space
