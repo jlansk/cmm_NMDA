@@ -96,12 +96,12 @@ f=win;
 spm_dcm_peb_review_fig_jl(PEB{f}, 2, 0.95, 1);
 
 %% Bayesian model comparison and averaging over symmetric space
-RMA{f} = spm_dcm_peb_bmc(PEB{f});
+%RMA{f} = spm_dcm_peb_bmc(PEB{f});
 
 Mtemp=spm_perm_mtx(10); Mtemp=full(Mtemp);
 np = length(PEB{1}.Pnames);
 Mall=zeros(size(Mtemp,1), np);
-Mall(:, 1:8) = Mtemp(:, 1:8);
+Mall(:, 1:8) = Mtemp(:, 1:8); % manual step taken from PEB result were Pp >.05
 Mall(:, 11) = Mtemp(:, 9);
 Mall(:, 15) = Mtemp(:, 10);
 
