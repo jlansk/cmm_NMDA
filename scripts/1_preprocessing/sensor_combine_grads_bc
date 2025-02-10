@@ -1,6 +1,9 @@
-%% Combine gradiometers (for sensor analysis only)
-% This script combines planar gradiometers for the sensor-level analyses
+%% Combine gradiometers and baseline correct (for sensor analysis only)
+% This script combines planar gradiometers for the sensor-level analyses and then applies baseline correction
 
+% set up variables
+clearvars
+E = cmm_environment;
 subjects=BLsubs;
 ana_dir= E.raw;
 task='mmn';
