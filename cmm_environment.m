@@ -8,9 +8,9 @@ spm('defaults', 'EEG');
 E.scr='/imaging/rowe/users/jl01/meg/dcm_cmm/scripts/to_publish/';
 addpath(genpath(E.scr));
 
-E.raw='/imaging/rowe/users/jl01/meg/dcm_cmc/meg_data/';
+E.raw='/imaging/rowe/users/jl01/meg/dcm_cmc/meg_data/'; % where the preprocessed data is kept
 
-E.anaB =   '/imaging/rowe/users/jl01/meg/dcm_cmm/reps0-5/BL_Feb23/full/noA3';
-E.anaL =  '/imaging/rowe/users/jl01/meg/dcm_cmm/reps0-5/AF_Feb23/full/noA3';
+E.anaB =   '/imaging/rowe/users/jl01/meg/dcm_cmm/reps0-5/BL_Feb23/full/noA3'; % Baseline analysis folder
+E.anaL =  '/imaging/rowe/users/jl01/meg/dcm_cmm/reps0-5/AF_Feb23/full/noA3'; % Longitudinal analysis folder
 
 end
